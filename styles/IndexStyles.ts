@@ -2,6 +2,7 @@ import { StyleSheet } from 'react-native';
 
 export const styles = StyleSheet.create({
     container: {
+        fontFamily: 'System',
         paddingTop: 40,
         backgroundColor: '#fff',
         paddingHorizontal: 15,
@@ -47,7 +48,7 @@ export const styles = StyleSheet.create({
     },
     templateSubtext: {
         marginTop: 10,
-        fontSize:13,
+        fontSize: 13,
         color: '#666'
     }
 });
