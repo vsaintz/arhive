@@ -36,18 +36,18 @@ export const styles = StyleSheet.create({
         marginTop: 30,
     },
     templateTextPrimary: {
-        fontSize: 35,
+        fontSize: 32,
         width: '100%',
         color: '#000'
     },
     templateTextSecondary: {
-        fontSize: 35,
+        fontSize: 32,
         width: '100%',
         color: '#000',
         marginTop: -5,
     },
     templateSubtext: {
-        marginTop: 10,
+        marginTop: 15,
         fontSize: 13,
         color: '#666'
     }

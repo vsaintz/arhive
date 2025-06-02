@@ -17,9 +17,9 @@ export const TemplatePreview01 = () => (
         </View>
 
         <View style={styles.detailsContainer}>
-            <Text style={styles.detailsText}>DATE: 06 MAY 2024</Text>
-            <Text style={styles.detailsText}>FROM: London Gatwick</Text>
-            <Text style={styles.detailsText}>FOR: Mitsahis</Text>
+            <Text style={styles.detailsText}>DATE: 20 MAY 2025</Text>
+            <Text style={styles.detailsText}>FROM: Roland Lepcha</Text>
+            <Text style={styles.detailsText}>FOR: Prayag </Text>
             <Text style={styles.detailsText}>BOARD: Self-Catering</Text>
         </View>
 
