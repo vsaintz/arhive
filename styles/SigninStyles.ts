@@ -9,14 +9,14 @@ export default StyleSheet.create({
     },
     title: {
         color: '#fff',
-        textAlign:'center',
+        textAlign: 'center',
         fontSize: 20,
         fontWeight: 'bold',
         marginBottom: 8,
     },
     subtitle: {
         color: '#aaa',
-        textAlign:'center',
+        textAlign: 'center',
         fontSize: 14,
         marginBottom: 24,
     },
@@ -45,14 +45,14 @@ export default StyleSheet.create({
         color: '#999',
         fontSize: 13,
     },
-    loginButton: {
+    signinButton: {
         backgroundColor: '#E5E5E5',
         paddingVertical: 12,
         borderRadius: 6,
         alignItems: 'center',
         marginTop: 8,
     },
-    loginButtonText: {
+    signinButtonText: {
         color: '#000',
         fontWeight: 'bold',
         fontSize: 16,
@@ -83,4 +83,11 @@ export default StyleSheet.create({
         color: '#fff',
         textDecorationLine: 'underline',
     },
+    errorText: {
+        color: 'red',
+        marginBottom: 4,
+        fontSize: 13,
+        textAlign: 'left',
+    },
+
 });

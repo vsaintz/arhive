@@ -94,5 +94,11 @@ export default StyleSheet.create({
         color: '#aaa',
         textDecorationLine: 'underline',
     },
+    errorText: {
+        color: 'red',
+        fontSize: 13,
+        marginBottom:12,
+    }
+
 
 })

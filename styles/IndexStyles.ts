@@ -3,16 +3,21 @@ import { StyleSheet } from 'react-native';
 export const styles = StyleSheet.create({
     container: {
         fontFamily: 'System',
-        paddingTop: 40,
+        paddingTop: 10,
         backgroundColor: '#fff',
         paddingHorizontal: 15,
         paddingBottom: 40,
     },
     header: {
         flexDirection: 'row',
+        backgroundColor: '#fff',
+        paddingVertical: 10,
+        paddingHorizontal: 15,
+        position: 'fixed',
         alignItems: 'center',
         justifyContent: 'space-between',
-        marginBottom: 20,
+        borderBottomWidth: 0.2,
+        borderColor: '#D1D5DB',
     },
     logo: {
         width: 40,
