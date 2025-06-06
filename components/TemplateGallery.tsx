@@ -1,63 +1,72 @@
 import React from 'react';
 import {
-    View,
-    FlatList,
-    Text,
-    Dimensions,
-    TouchableOpacity,
+  View,
+  Text,
+  TouchableOpacity,
+  Dimensions,
+  StyleSheet,
 } from 'react-native';
-import { styles } from '@/styles/TemplateGalleryStyles';
 
 import { TemplatePreview01 } from '@/components/previews/TemplatePreview-01';
 import { TemplatePreview02 } from '@/components/previews/TemplatePreview-02';
 import { TemplatePreview03 } from '@/components/previews/TemplatePreview-03';
 
-const SCREEN_WIDTH = Dimensions.get('window').width;
+const { width: SCREEN_WIDTH } = Dimensions.get('window');
 
-type TemplateCard = {
-    id: string;
-};
-
-const templates: TemplateCard[] = [
-    { id: '1' },
-    { id: '2' },
-    { id: '3' },
+const templates = [
+  { id: '1', Component: TemplatePreview01 },
+  { id: '2', Component: TemplatePreview02 },
+  { id: '3', Component: TemplatePreview03 },
 ];
 
 export const TemplateGallery: React.FC = () => {
-    const renderTemplatePreview = (id: string) => {
-        switch (id) {
-            case '1':
-                return <TemplatePreview01 />;
-            case '2':
-                return <TemplatePreview02 />;
-            case '3':
-                return <TemplatePreview03 />;
-            default:
-                return null;
-        }
-    };
-
-    const renderItem = ({ item }: { item: TemplateCard }) => (
-        <View style={styles.templateContainer}>
-            <View style={[styles.card, { width: SCREEN_WIDTH - 20 }]}>
-                {renderTemplatePreview(item.id)}
-            </View>
-            <View style={styles.buttonContainer}>
-                <TouchableOpacity style={styles.templateButton}>
-                    <Text style={styles.buttonText}>Try Template</Text>
-                </TouchableOpacity>
-            </View>
+  return (
+    <View style={styles.scrollContainer}>
+      {templates.map(({ id, Component }) => (
+        <View key={id} style={styles.templateContainer}>
+          <View style={styles.card}>
+            <Component />
+          </View>
+          <TouchableOpacity style={styles.templateButton}>
+            <Text style={styles.buttonText}>Try Template</Text>
+          </TouchableOpacity>
         </View>
-    );
-
-    return (
-        <View style={styles.galleryContainer}>
-            <FlatList
-                data={templates}
-                keyExtractor={(item) => item.id}
-                renderItem={renderItem}
-            />
-        </View>
-    );
+      ))}
+    </View>
+  );
 };
+
+const styles = StyleSheet.create({
+  scrollContainer: {
+    padding: 10,
+    alignItems: 'center',
+  },
+  templateContainer: {
+    width: SCREEN_WIDTH * 0.95,
+    backgroundColor: '#fff',
+    borderRadius: 15,
+    borderColor: '#D1D5DB',
+    borderWidth: 1,
+    overflow: 'hidden',
+    marginBottom: 24,
+  },
+  card: {
+    width: '100%',
+    borderRadius: 15,
+    overflow: 'hidden',
+  },
+  templateButton: {
+    backgroundColor: '#000',
+    paddingVertical: 10,
+    paddingHorizontal: 20,
+    borderRadius: 6,
+    alignSelf: 'center',
+    marginVertical: 12,
+  },
+  buttonText: {
+    color: '#fff',
+    fontWeight: '600',
+    fontSize: 14,
+    textAlign: 'center',
+  },
+});
