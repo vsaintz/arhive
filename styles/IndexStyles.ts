@@ -38,7 +38,7 @@ export const styles = StyleSheet.create({
     },
     templateTextContainer: {
         width: '100%',
-        marginTop: 30,
+        marginTop: 20,
     },
     templateTextPrimary: {
         fontSize: 32,

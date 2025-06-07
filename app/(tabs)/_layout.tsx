@@ -1,5 +1,7 @@
 import { Tabs } from 'expo-router';
 import { Ionicons } from '@expo/vector-icons';
+import MaterialCommunityIcons from '@expo/vector-icons/MaterialCommunityIcons';
+import Octicons from '@expo/vector-icons/Octicons';
 import type { BottomTabNavigationOptions } from '@react-navigation/bottom-tabs';
 import { styles } from '@/styles/CustomTabStyles';
 import CustomTabBarButton from '@/components/CustomTabBarButton';
@@ -15,24 +17,39 @@ export default function TabLayout() {
         tabBarInactiveTintColor: '#9CA3AF',
         tabBarButton: (props) => <CustomTabBarButton {...props} />,
         tabBarIcon: ({ color }) => {
-          let iconName: keyof typeof Ionicons.glyphMap;
-
           switch (route.name) {
             case 'index':
-              iconName = 'home-outline';
-              break;
+              return (
+                <MaterialCommunityIcons
+                  name="home-roof"
+                  size={24}
+                  color={color}
+                />
+              );
             case 'camera':
-              iconName = 'camera-outline';
-              break;
+              return (
+                <Octicons
+                  name="dot-fill"
+                  size={30}
+                  color={color}
+                />
+              );
             case 'profile':
-              iconName = 'person-outline';
-              break;
+              return (
+                <Ionicons
+                  name="person"
+                  size={22}
+                  color={color}
+                />
+              );
             default:
-              iconName = 'ellipse-outline';
-              break;
+              return (
+                <Ionicons
+                  name="ellipse-outline"
+                  size={24}
+                  color={color} />
+              );
           }
-
-          return <Ionicons name={iconName} size={24} color={color} />;
         },
       })}
     />
