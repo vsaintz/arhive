@@ -5,7 +5,7 @@ import { Linking, Text, View } from 'react-native';
 export default function CameraScreen() {
   useFocusEffect(
     React.useCallback(() => {
-      Linking.openURL('https://prayag0895.github.io/3dq3teffe');
+      Linking.openURL('https://prayag0895.github.io/mcaminiproject2025p4qejt');
       return () => { };
     }, [])
   );
