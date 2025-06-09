@@ -44,15 +44,16 @@ const styles = StyleSheet.create({
     backgroundColor: '#fff',
   },
   headerImage: {
+    zIndex: -1,
+    position: 'absolute',
     width: '100%',
     height: Dimensions.get('window').height * 0.3,
     resizeMode: 'cover',
   },
   profileView: {
-    zIndex: 1,
+    top: Dimensions.get('window').height * 0.20,
     justifyContent: 'center',
     alignItems: 'center',
-    backgroundColor: 'rgba(255, 255, 255, 0.3)',
     width: '95%',
     borderRadius: 15,
     padding: 20,
@@ -78,6 +79,7 @@ const styles = StyleSheet.create({
     marginTop: 5,
   },
   profileContent: {
+    top: Dimensions.get('window').height * 0.25,
     width: '95%',
     backgroundColor: '#f0f0f0',
     borderRadius: 15,
