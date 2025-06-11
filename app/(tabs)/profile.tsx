@@ -26,12 +26,17 @@ export default function ProfileScreen() {
             style={styles.profileImage}
           />
           <Text style={styles.profileText}>{displayName}</Text>
-          <Text style={styles.profileSubText}>Welcome to my profile!</Text>
+          <Text style={styles.profileSubText}>Keep things moving</Text>
         </View>
 
         <View style={styles.profileContent}>
           <View>
-            <Text style={{ color: '#000', textAlign: 'left' }}>Works</Text>
+            <Text style={{ color: '#fff', textAlign: 'left' }}>Works</Text>
+          </View>
+          <View>
+            <Text style={{ color: '#666', textAlign: 'left', marginTop: 10 }}>
+              Here you can showcase your works, postcards, or anything else you'd like to share with the world.
+            </Text>
           </View>
         </View>
       </ScrollView>
@@ -79,9 +84,9 @@ const styles = StyleSheet.create({
     marginTop: 5,
   },
   profileContent: {
-    top: Dimensions.get('window').height * 0.25,
+    top: Dimensions.get('window').height * 0.20,
     width: '95%',
-    backgroundColor: '#f0f0f0',
+    backgroundColor: '#000',
     borderRadius: 15,
     padding: 20,
     marginBottom: 20,
