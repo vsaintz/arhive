@@ -1,5 +1,11 @@
 import React, { useState } from 'react';
-import { View, Text, StyleSheet, TouchableOpacity, TextInput } from 'react-native';
+import { router } from 'expo-router';
+import {
+  View, Text,
+  StyleSheet,
+  TouchableOpacity,
+  TextInput
+} from 'react-native';
 import AntDesign from '@expo/vector-icons/AntDesign';
 import FontAwesome6 from '@expo/vector-icons/FontAwesome6';
 
@@ -33,7 +39,7 @@ export const HeroView = () => {
       <View style={styles.card}>
         <Text style={styles.title}>Augment the Ancient</Text>
         <Text style={styles.description}>Discover the culture and stories of Sikkim through interactive AR postcards.</Text>
-        <TouchableOpacity style={styles.button}>
+        <TouchableOpacity style={styles.button} onPress={() => router.push('/(tabs)/camera')}>
           <Text style={styles.buttonText}>Start</Text>
           <FontAwesome6 name="arrow-right-long" size={15} color="white" />
         </TouchableOpacity>
