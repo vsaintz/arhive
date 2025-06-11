@@ -1,4 +1,11 @@
-import { ScrollView, View, Text, Image, StatusBar, SafeAreaView, Platform } from 'react-native';
+import {
+  ScrollView,
+  Pressable,
+  View, Text,
+  Image, StatusBar,
+  SafeAreaView, Platform
+} from 'react-native';
+import { router } from 'expo-router';
 import { styles } from '@/styles/IndexStyles';
 import { Ionicons } from '@expo/vector-icons';
 import { HeroView } from '@/components/HeroView';
@@ -27,10 +34,12 @@ export default function HomeScreen() {
     <SafeAreaView style={[{ flex: 1, backgroundColor: '#fff', paddingTop: Platform.OS === 'android' ? StatusBar.currentHeight : 0 }]}>
       <StatusBar barStyle='dark-content' backgroundColor="#fff" />
       <View style={styles.header}>
-        <Image
-          source={require('@/assets/images/profileicon.jpg')}
-          style={styles.logo}
-        />
+        <Pressable onPress={() => router.push('/(tabs)/profile')}>
+          <Image
+            source={require('@/assets/images/profileicon.jpg')}
+            style={styles.logo}
+          />
+        </Pressable>
         <View style={styles.textContainer}>
           <Text style={styles.welcome}>Welcome, {displayName}</Text>
           <Text style={styles.subText}>Today, {day} {month}</Text>
