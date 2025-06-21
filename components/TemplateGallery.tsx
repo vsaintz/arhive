@@ -27,9 +27,6 @@ export const TemplateGallery: React.FC = () => {
           <View style={styles.card}>
             <Component />
           </View>
-          <TouchableOpacity style={styles.templateButton}>
-            <Text style={styles.buttonText}>Try Template</Text>
-          </TouchableOpacity>
         </View>
       ))}
     </View>
