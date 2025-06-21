@@ -36,7 +36,7 @@ export default function HomeScreen() {
       <View style={styles.header}>
         <Pressable onPress={() => router.push('/(tabs)/profile')}>
           <Image
-            source={require('@/assets/images/profileicon.jpg')}
+            source={require('@/assets/images/c65eb98386f768e88fe3778a18066bf7.jpg')}
             style={styles.logo}
           />
         </Pressable>
