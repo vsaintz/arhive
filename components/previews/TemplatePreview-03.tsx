@@ -1,26 +1,35 @@
 import React from 'react';
 import { View, Text, StyleSheet, Image, Dimensions } from 'react-native';
+import TagsComponent from '@/components/TagsComponent';
 
 const { width: SCREEN_WIDTH } = Dimensions.get('window');
 
 export const TemplatePreview03 = () => (
-  <View style={styles.container}>
-    <View style={styles.imageContainer}>
-      <Image
-        source={require('@/assets/templates/keat.jpg')}
-        style={styles.image}
-      />
-    </View>
-
-    <View style={styles.textContainer}>
-      <Text style={styles.estText}>gtk the '05</Text>
-      <Text style={styles.titleText}>IDEA HAVEN</Text>
-
-      <View style={styles.subtitleContainer}>
-        <Text style={styles.subtitleText}>
-          FOR PEOPLE THAT <Text style={styles.italicText}>feels </Text>LIKE poetry
-        </Text>
+  <View>
+    <View style={styles.container}>
+      <View style={styles.imageContainer}>
+        <Image
+          source={require('@/assets/templates/keat.jpg')}
+          style={styles.image}
+        />
       </View>
+
+      <View style={styles.textContainer}>
+        <Text style={styles.estText}>gtk the '05</Text>
+        <Text style={styles.titleText}>IDEA HAVEN</Text>
+
+        <View style={styles.subtitleContainer}>
+          <Text style={styles.subtitleText}>
+            FOR PEOPLE THAT <Text style={styles.italicText}>feels </Text>LIKE poetry
+          </Text>
+        </View>
+      </View>
+    </View>
+    <View style={{ marginVertical: 16, }}>
+      <Text style={{ fontSize: 14, fontWeight: 'bold', marginBottom: 8, paddingHorizontal: 12 }}>
+        Tags
+      </Text>
+      <TagsComponent tags={['personal', 'friends', 'sikkim diaries', 'travel photography', 'himalayas', 'adventure travel']} />
     </View>
   </View>
 );
@@ -30,7 +39,7 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     width: '100%',
     height: SCREEN_WIDTH * 0.9,
-    borderRadius: 15,
+
     overflow: 'hidden',
     backgroundColor: '#FFF6E5',
   },
