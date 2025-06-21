@@ -13,5 +13,5 @@ Key features include:
 
 The project is deeply rooted in the belief that **technology can support cultural memory**, not replace it. With every scan, users not only learn about monuments and legends but also reconnect with the languages and traditions that define the region.
 
-This is an ongoing project, open to contributions, translations, and content suggestions from educators, locals, and developers interested in cultural preservation through AR.
+This is an ongoing project, open to contributions, translations, and content suggestions from educators, locals, and developers interested in cultural preservation through AR
 
