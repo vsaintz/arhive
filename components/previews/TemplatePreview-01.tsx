@@ -1,28 +1,33 @@
 import React from 'react';
 import { View, Text, StyleSheet, Image, Dimensions } from 'react-native';
+import TagsComponent from '@/components/TagsComponent';
 
 const { width: SCREEN_WIDTH } = Dimensions.get('window');
 
 export const TemplatePreview01 = () => (
   <View style={styles.container}>
     <Image
-      source={require('@/assets/templates/francesco-ungaro.jpg')}
+      source={require('@/assets/templates/nathula-pass.jpg')}
       style={styles.headerImage}
     />
 
     <View style={styles.titleContainer}>
-      <Text style={styles.title}>VILLA <Text style={styles.titleItalic}>ESCAPE</Text></Text>
+      <Text style={styles.title}>Nathula <Text style={styles.titleItalic}>Pass</Text></Text>
+      <Text style={styles.titleDate}>DATE: 20 MAY 2025</Text>
     </View>
 
     <View style={styles.detailsContainer}>
-      <Text style={styles.detailsText}>DATE: 20 MAY 2025</Text>
-      <Text style={styles.detailsText}>FROM: Roland Lepcha</Text>
-      <Text style={styles.detailsText}>FOR: Prayag</Text>
-      <Text style={styles.detailsText}>BOARD: Self-Catering</Text>
+      <Text style={styles.detailsText}>Nestled at 14,140 feet in the Himalayas, Nathula Pass in Sikkim is a breathtaking blend of natural splendor and historical significance.
+        Once a vital artery of the ancient Silk Route, this high-altitude pass connects India with Tibet, offering panoramic views of snow-clad peaks and the serene Chumbi Valley.
+        A journey along the winding Gangtok-Nathula Highway unveils cascading waterfalls, vibrant prayer flags, and the crisp mountain air, making it an unforgettable adventure.
+        Visit this iconic border post to witness its rich legacy and stunning landscapes, a true gem of Sikkim’s heritage.</Text>
     </View>
 
-    <View style={styles.logoContainer}>
-      <Text style={styles.logoText}>GTK</Text>
+    <View style={{ marginVertical: 5, }}>
+      <Text style={{ fontSize: 14, fontWeight: 'bold', marginBottom: 8, paddingHorizontal: 12 }}>
+        Tags
+      </Text>
+      <TagsComponent tags={['nathula pass','travel', 'adventure', 'himalayas', 'high altitude', 'mountain']} />
     </View>
   </View>
 );
@@ -43,9 +48,11 @@ const styles = StyleSheet.create({
     paddingHorizontal: 16,
     paddingTop: 12,
     flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'space-between',
   },
   title: {
-    fontSize: 28,
+    fontSize: 25,
     fontWeight: 'bold',
     color: '#1A3C34',
   },
@@ -53,21 +60,17 @@ const styles = StyleSheet.create({
     fontStyle: 'italic',
     marginLeft: 5,
   },
+  titleDate: {
+    fontSize: 13,
+    color: '#666',
+  },
   detailsContainer: {
     padding: 16,
   },
   detailsText: {
-    fontSize: 12,
+    fontSize: 13,
+    textAlign: 'justify',
     color: '#444',
     lineHeight: 18,
-  },
-  logoContainer: {
-    alignItems: 'flex-end',
-    padding: 16,
-  },
-  logoText: {
-    fontSize: 14,
-    fontWeight: 'bold',
-    color: '#1A3C34',
   },
 });
